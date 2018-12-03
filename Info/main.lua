@@ -1,18 +1,15 @@
 local component = require("component")
 local computer = require("computer")
 local GUI = require("GUI")
-local MineOSInterface = require("MineOSInterface")
-local srl = require("serialization") 
+local MineOSInterface = require("MineOSInterface") 
+local MOC = require("MineOSCore")
 
-local Author = ("Fronun, MineCR")
+local currentScriptDirectory = MOC.getCurrentScriptDirectory() 
+local localization = MOC.getLocalization(currentScriptDirectory .. "Localization/") 
 
-local version = "1.01"
 
 -- окно
 local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(50, 30, 70, 27, "Info", true))
-window.backgroundPanel.colors.transparency = 0.2
-window:addChild(GUI.label(27, 25, window.width, window.height, 0x5A5A5A, "Version: "..version))
-window:addChild(GUI.label(3, 27, window.width, window.height, 0x5A5A5A, Author)) 
 window:addChild(GUI.label(25, 2, window.width, window.height, 0x5A5A5A, "Information about the computer:"))
 
 
