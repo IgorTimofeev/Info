@@ -9,7 +9,7 @@ local localization = MOC.getLocalization(currentScriptDirectory .. "Localization
 
 
 -- окно
-local mainContainer, window = MineOSInterface.addWindow(GUI.titledWindow(50, 30, 70, 27, "Info", true))
+local application, window = MineOSInterface.addWindow(GUI.titledWindow(50, 30, 70, 27, "Info", true))
 window:addChild(GUI.label(25, 2, window.width, window.height, 0x5A5A5A, localization.info))
 
 
